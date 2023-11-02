@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Expense(props) {
     const {
         bg,

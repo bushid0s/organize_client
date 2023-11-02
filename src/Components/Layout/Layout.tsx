@@ -1,6 +1,5 @@
-import React from 'react';
-import Footer from '../Footer/Footer';
-import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer.tsx';
+import Navbar from '../Navbar/Navbar.tsx';
 
 export default function Layout(props) {
     const { children } = props;

@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import FlashMessage from '../../Components/FlashMessage/FlashMessage';
+import FlashMessage from '../../Components/FlashMessage/FlashMessage.tsx';
 
 export default function Signup() {
     const { register, handleSubmit } = useForm();
@@ -12,7 +12,7 @@ export default function Signup() {
     const onSubmit = async (userPayload) => {
         try {
             const signupStatus = await axios.post(
-                `${process.env.REACT_APP_API_URI}/signup`,
+                `${import.meta.env.REACT_APP_API_URI}/signup`,
                 userPayload,
                 {
                     headers: {

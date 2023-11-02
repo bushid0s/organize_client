@@ -1,10 +1,9 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Pages
-import Expenses from './pages/Expenses/Expenses';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
+import Expenses from './pages/Expenses/Expenses.tsx';
+import Login from './pages/Login/Login.tsx';
+import Signup from './pages/Signup/Signup.tsx';
 
 export default function App() {
     return (
