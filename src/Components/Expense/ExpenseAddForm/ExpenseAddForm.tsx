@@ -20,7 +20,7 @@ export default function ExpenseAddForm(props) {
 
     // States
     const [selectedOption, setSelectedOption] = useState('');
-    const [categories, setCategories] = useState('');
+    const [categories, setCategories] = useState([]);
     const [areCategoriesFetched, setAreCategoriesFetched] =
         useState(false);
 
@@ -137,8 +137,8 @@ export default function ExpenseAddForm(props) {
                 <textarea
                     autoComplete='off'
                     {...register('description')}
-                    rows='5'
-                    cols='33'
+                    rows={5}
+                    cols={33}
                     placeholder={'Description'}
                     defaultValue={
                         completeItem ? completeItem.description : ''

@@ -8,9 +8,9 @@ import Signup from './pages/Signup/Signup.tsx';
 export default function App() {
     return (
         <Routes>
-            <Route exact path='/' element={<Expenses />} />
-            <Route exact path='/connexion' element={<Login />} />
-            <Route exact path='/inscription' element={<Signup />} />
+            <Route path='/' element={<Expenses />} />
+            <Route path='/connexion' element={<Login />} />
+            <Route path='/inscription' element={<Signup />} />
         </Routes>
     );
 }
