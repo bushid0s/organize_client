@@ -29,7 +29,7 @@ export default function ExpenseAddForm(props) {
             switch (action) {
                 case 'update':
                     await axios.put(
-                        `${import.meta.env.REACT_APP_API_URI}/expenses/${itemSelected}`, // PIN : au lieu de itemSelected => completeItem._id ?
+                        `${import.meta.env.VITE_APP_API_URI}/expenses/${itemSelected}`, // PIN : au lieu de itemSelected => completeItem._id ?
                         newExpense,
                         {
                             headers: {
@@ -45,7 +45,7 @@ export default function ExpenseAddForm(props) {
                     break;
                 default:
                     await axios.post(
-                        `${process.env.REACT_APP_API_URI}/expenses`,
+                        `${import.meta.env.VITE_APP_API_URI}/expenses`,
                         newExpense,
                         {
                             headers: {
@@ -68,7 +68,7 @@ export default function ExpenseAddForm(props) {
         const getCategories = async () => {
             try {
                 let categoriesResult = await axios.get(
-                    `${process.env.REACT_APP_API_URI}/categories`,
+                    `${import.meta.env.VITE_APP_API_URI}/categories`,
                     {
                         headers: {
                             'ngrok-skip-browser-warning': 'anyVal',

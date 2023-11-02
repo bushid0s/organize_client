@@ -19,14 +19,13 @@ export default function Expenses() {
     const [areExpensesFetched, setAreExpensesFetched] =
         useState(false);
     const [completeItem, setCompleteItem] = useState([]);
-    console.log(`${import.meta.env.REACT_APP_API_URI}/expenses/`);
 
     // Récupère les dépenses de la DB
     useEffect(() => {
         const getExpenses = async () => {
             try {
                 const expensesResult = await axios.get(
-                    `${import.meta.env.REACT_APP_API_URI}/expenses/`,
+                    `${import.meta.env.VITE_APP_API_URI}/expenses/`,
                     {
                         headers: {
                             'ngrok-skip-browser-warning': 'anyVal',

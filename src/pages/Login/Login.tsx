@@ -9,7 +9,7 @@ export default function Login() {
         console.log(userPayload);
         try {
             const loginStatus = await axios.post(
-                `${import.meta.env.REACT_APP_API_URI}/login`,
+                `${import.meta.env.VITE_APP_API_URI}/login`,
                 userPayload,
                 {
                     headers: {

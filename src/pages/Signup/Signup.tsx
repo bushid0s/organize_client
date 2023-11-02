@@ -12,7 +12,7 @@ export default function Signup() {
     const onSubmit = async (userPayload) => {
         try {
             const signupStatus = await axios.post(
-                `${import.meta.env.REACT_APP_API_URI}/signup`,
+                `${import.meta.env.VITE_APP_API_URI}/signup`,
                 userPayload,
                 {
                     headers: {
