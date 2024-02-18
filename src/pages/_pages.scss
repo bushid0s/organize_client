@@ -1,0 +1,52 @@
+@import '../styles/variables.scss';
+
+.expenses {
+    h1 {
+        font-family: $font1;
+    }
+
+    &__buttons {
+        color: #f1f1f1;
+        display: flex;
+        position: sticky;
+        padding: 0.5rem 0;
+        top: 0px;
+        background-color: #ffffff;
+        z-index: 2;
+    }
+
+    &__form-container,
+    &__modal {
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100dvh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.531);
+    }
+
+    &__list {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+
+        &__item {
+            cursor: pointer;
+        }
+    }
+}
+
+.page-container {
+    height: 100%;
+    @media (max-width: 1100px) {
+        justify-content: center;
+        &__image {
+            display: none;
+        }
+        .w49 {
+            width: 100%;
+        }
+    }
+}

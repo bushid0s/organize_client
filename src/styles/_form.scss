@@ -1,0 +1,58 @@
+.form {
+    z-index: 2;
+    padding: 2rem 3rem;
+    width: 500px;
+
+    @media (max-width: 480px) {
+        width: 95vw;
+        padding: 1.5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: $radius1;
+    border: 1px solid lightgray;
+    background-color: white;
+    box-shadow: $shadow1;
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inputs-group {
+        margin-top: 1.5rem;
+        > input:not(:last-of-type) {
+            margin-bottom: 1.5rem;
+        }
+
+        > label {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.add-form,
+.update-form,
+.delete-form {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    &__inputs-group {
+        margin-top: 0;
+        > * {
+            width: 100%;
+        }
+        > input:not(:last-of-type),
+        select,
+        textarea {
+            margin-bottom: 1rem;
+        }
+
+        > label {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
